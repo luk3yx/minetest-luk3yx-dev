@@ -1,12 +1,12 @@
 name: minetest-luk3yx
-version: "0.4.15"
-summary: "luk3yx's unofficial Minetest builds. Credit to the snappy playpen."
+version: "0.4.15-dev"
+summary: "luk3yx's unofficial Minetest-dev builds. Credit to the snappy playpen."
 description: |
   Minetest is a minecraft-inspired game written from scratch and licensed
   under the LGPL (version 2.1 or later). It supports both survival and
   creative modes along with multiplayer support, dynamic lighting, and an
   "infinite" map generator.
-grade: stable
+grade: edge
 confinement: strict
 
 apps:
@@ -58,7 +58,7 @@ parts:
       - libluajit-5.1-dev
       - libogg-dev
       - libopenal-dev
-      - libpng-dev
+      - libpng16-dev
       - libpulse-dev
       - libsqlite3-dev
       - libvorbis-dev

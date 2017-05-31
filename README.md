@@ -1,4 +1,4 @@
-# luk3yx's unofficial Minetest snap
+# Clone of luk3yx's unofficial Minetest snap for build.snapcraft.io dev builds.
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
 
 ## How to install
