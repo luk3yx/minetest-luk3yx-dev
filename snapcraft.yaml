@@ -1,6 +1,6 @@
 name: minetest-luk3yx-dev
 version: "0.4.16"
-summary: "[TESTING ONLY] luk3yx's unofficial Minetest-dev builds. Credit to the snappy playpen."
+summary: "luk3yx's unofficial Minetest builds for testing. Credit to the snappy playpen."
 description: |
   Minetest is a minecraft-inspired game written from scratch and licensed
   under the LGPL (version 2.1 or later). It supports both survival and
