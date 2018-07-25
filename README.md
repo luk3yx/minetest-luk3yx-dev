@@ -1,4 +1,4 @@
-# Clone of luk3yx's unofficial Minetest snap for build.snapcraft.io dev builds.
+# luk3yx's unofficial Minetest snap (-dev builds)
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
 
 ## How to install
@@ -15,12 +15,15 @@ $ su -c 'snap install minetest-luk3yx'
 
 Note: Make sure that snapd is installed before running the above commands.
 
+## Stable builds
+You can find stable builds [here](https://github.com/luk3yx/minetest-luk3yx).
+
 ## FAQ
 **What is a snap?**
 
 Snaps are universal Linux packages.
 
-**Where can I find a forum page for this?**
+**Where can I find a forum topic for this?**
 
 You can find it [here](https://forum.minetest.net/viewtopic.php?f=42&t=16088).
 

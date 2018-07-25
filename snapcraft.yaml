@@ -1,26 +1,25 @@
 name: minetest-luk3yx-dev
-version: "0.5-dev"
-summary: "Unofficial builds of minetest-dev"
+version: "5.0.0-dev"
+summary: "luk3yx's unofficial Minetest builds."
 description: |
-  Minetest is a minecraft-inspired game written from scratch and licensed
+  Minetest is a Minecraft-inspired game written from scratch and licensed
   under the LGPL (version 2.1 or later). It supports both survival and
   creative modes along with multiplayer support, dynamic lighting, and an
   "infinite" map generator.
-grade: stable
+grade: edge
 confinement: strict
+icon: snap/gui/minetest.svg
 
 apps:
   minetest:
     command: launcher
-    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
-    aliases: [minetest]
+    plugs: [x11, network, network-bind, opengl, pulseaudio]
   minetestserver:
     command: launcher --server
-    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
-    aliases: [minetestserver]
+    plugs: [x11, network, network-bind, opengl, pulseaudio]
   minetest-luk3yx-dev:
     command: launcher
-    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+    plugs: [x11, network, network-bind, opengl, pulseaudio]
 
 parts:
   launcher:
@@ -29,10 +28,12 @@ parts:
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
     plugin: dump
+    source-branch: stable-0.4
     organize:
       '*': 'share/minetest/games/minetest_game/'
   minetest:
     source: https://github.com/minetest/minetest.git
+    source-branch: stable-0.4
     plugin: cmake
     configflags: [-DRUN_IN_PLACE=FALSE]
     build-packages:
