@@ -28,12 +28,12 @@ parts:
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
     plugin: dump
-    source-branch: stable-0.4
+    source-branch: master
     organize:
       '*': 'share/minetest/games/minetest_game/'
   minetest:
     source: https://github.com/minetest/minetest.git
-    source-branch: stable-0.4
+    source-branch: master
     plugin: cmake
     configflags: [-DRUN_IN_PLACE=FALSE]
     build-packages:
