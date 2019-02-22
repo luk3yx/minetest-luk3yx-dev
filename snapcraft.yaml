@@ -63,3 +63,24 @@ parts:
       - libgl1-mesa-dri
       - libpulse0
       - libcurl3-gnutls
+      - libgl1-mesa-glx
+      - libirrlicht1.8
+      - libxshmfence1
+      - libxcb-sync1
+      - libxcb-present0
+      - libxcb-glx0
+      - libxcb-dri3-0
+      - libxcb-dri2-0
+      - libvorbisfile3
+      - libsnappy1v5
+      - libfreetype6
+      - libopenal1
+      - libluajit-5.1-2
+      - libleveldb1v5
+      - libjpeg-turbo8
+      - libxxf86vm1
+      - libxfixes3
+      - libxext6
+      - libxdamage1
+      - libx11-6
+      - libx11-xcb1
