@@ -1,5 +1,5 @@
 name: minetest-luk3yx-dev
-version: "5.1.0-dev"
+version: "5.2.0-dev"
 summary: "luk3yx's unofficial Minetest builds."
 description: |
   Minetest is a Minecraft-inspired game written from scratch and licensed
@@ -9,17 +9,21 @@ description: |
 grade: devel
 confinement: strict
 icon: snap/gui/minetest.svg
+base: core18
 
 apps:
   minetest:
     command: launcher
-    plugs: [x11, network, network-bind, opengl, pulseaudio]
+    plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
+        audio-playback]
   minetestserver:
     command: launcher --server
-    plugs: [x11, network, network-bind, opengl, pulseaudio]
+    plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
+        audio-playback]
   minetest-luk3yx-dev:
     command: launcher
-    plugs: [x11, network, network-bind, opengl, pulseaudio]
+    plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
+        audio-playback]
 
 parts:
   launcher:
