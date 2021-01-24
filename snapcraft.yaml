@@ -1,5 +1,5 @@
 name: minetest-luk3yx-dev
-version: "5.2.0-dev"
+version: "git"
 summary: "luk3yx's unofficial Minetest builds."
 description: |
   Minetest is a Minecraft-inspired game written from scratch and licensed
