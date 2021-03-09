@@ -11,6 +11,13 @@ confinement: strict
 icon: snap/gui/minetest.svg
 base: core18
 
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+  - build-on: armhf
+  - build-on: i386
+  - build-on: ppc64el
+
 apps:
   minetest:
     command: launcher
@@ -27,7 +34,7 @@ apps:
 
 parts:
   launcher:
-    source: snap/scripts
+    source: scripts
     plugin: dump
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
@@ -35,22 +42,29 @@ parts:
     source-branch: master
     organize:
       '*': 'share/minetest/games/minetest_game/'
+  irrlicht:
+    source: https://github.com/minetest/irrlicht.git
+    source-branch: master
+    plugin: cmake
+    override-pull: |
+      snapcraftctl pull
+      tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+      git checkout "$tag"
   minetest:
     source: https://github.com/minetest/minetest.git
     source-branch: master
     plugin: cmake
     configflags: [-DRUN_IN_PLACE=FALSE]
+    after:
+      - irrlicht
     build-packages:
       - cmake
       - gcc
       - g++
       - gettext
-      - imagemagick
-      - libbz2-dev
       - libcurl4-gnutls-dev
       - libfreetype6-dev
       - libglu1-mesa-dev
-      - libirrlicht-dev
       - libjpeg-dev
       - libjsoncpp-dev
       - libleveldb-dev
@@ -68,7 +82,6 @@ parts:
       - libpulse0
       - libcurl3-gnutls
       - libgl1-mesa-glx
-      - libirrlicht1.8
       - libxshmfence1
       - libxcb-sync1
       - libxcb-present0
