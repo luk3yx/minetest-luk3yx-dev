@@ -75,6 +75,7 @@ parts:
       - libsqlite3-dev
       - libvorbis-dev
       - libx11-dev
+      - libzstd-dev
       - zlib1g-dev
     stage-packages:
       - libgl1-mesa-dri
