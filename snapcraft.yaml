@@ -50,6 +50,10 @@ parts:
       snapcraftctl pull
       tag=$(git describe --tags $(git rev-list --tags --max-count=1))
       git checkout "$tag"
+
+      curl https://github.com/appgurueu/irrlicht/commit/0f1bff1da4e38daeee944ff12d1a916373cdfbc2.patch > line-drawing.patch
+      echo 'f54cea7dd9f18ddcda6a7f5e80c3e0f8c4256f8eb2ee5779f80084ef5c1652f7 line-drawing.patch' | sha256sum -c && git apply line-drawing.patch
+      rm -v line-drawing.patch
   minetest:
     source: https://github.com/minetest/minetest.git
     source-branch: master
@@ -59,6 +63,7 @@ parts:
       - irrlicht
     build-packages:
       - cmake
+      - curl
       - gcc
       - g++
       - gettext
