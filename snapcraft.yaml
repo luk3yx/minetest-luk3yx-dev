@@ -83,6 +83,7 @@ parts:
       - libzstd-dev
       - zlib1g-dev
     stage-packages:
+      - libasound2
       - libgl1-mesa-dri
       - libpulse0
       - libcurl3-gnutls
