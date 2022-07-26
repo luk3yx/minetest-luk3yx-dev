@@ -55,7 +55,7 @@ parts:
       echo 'f54cea7dd9f18ddcda6a7f5e80c3e0f8c4256f8eb2ee5779f80084ef5c1652f7 line-drawing.patch' | sha256sum -c && git apply line-drawing.patch
       curl https://github.com/luk3yx/irrlicht/commit/66bdf09885cbf909e642d60f5be2797e21321ea2.patch > line-drawing-2.patch
       echo '4b50a56fb8777a5a1602494d1840a3b726a95ff56985b7bf67f4a8dce4bcbb6d line-drawing-2.patch' | sha256sum -c && git apply line-drawing-2.patch
-      rm -v line-drawing.patch
+      rm -v line-drawing.patch line-drawing-2.patch
   minetest:
     source: https://github.com/minetest/minetest.git
     source-branch: master
