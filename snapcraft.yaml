@@ -107,6 +107,6 @@ parts:
       - libxfixes3
       - libxext6
       - libxdamage1
-      - libxi
+      - libxi6
       - libx11-6
       - libx11-xcb1
