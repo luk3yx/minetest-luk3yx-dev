@@ -41,21 +41,15 @@ parts:
     source-branch: master
     organize:
       '*': 'share/minetest/games/minetest_game/'
-  irrlicht:
-    source: https://github.com/minetest/irrlicht.git
-    source-branch: master
-    plugin: cmake
-    override-pull: |
-      snapcraftctl pull
-      tag=$(git describe --tags $(git rev-list --tags --max-count=1))
-      git checkout "$tag"
   minetest:
     source: https://github.com/minetest/minetest.git
     source-branch: master
     plugin: cmake
-    autotools-configure-parameters: [-DRUN_IN_PLACE=FALSE]
-    after:
-      - irrlicht
+    cmake-parameters: [-DRUN_IN_PLACE=FALSE]
+    override-pull: |
+      snapcraftctl pull
+      tag=$(cat misc/irrlichtmt_tag.txt)
+      git clone --depth 1 --branch "$tag" https://github.com/minetest/irrlicht lib/irrlichtmt
     build-packages:
       - cmake
       - curl
