@@ -1,5 +1,8 @@
 # luk3yx's unofficial Minetest snap (-dev builds)
+
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
+
+This snap is deprecated.
 
 ## How to install
 
