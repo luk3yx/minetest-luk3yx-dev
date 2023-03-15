@@ -9,13 +9,12 @@ description: |
 grade: devel
 confinement: strict
 icon: snap/gui/minetest.svg
-base: core18
+base: core20
 
 architectures:
   - build-on: amd64
   - build-on: arm64
   - build-on: armhf
-  - build-on: i386
   - build-on: ppc64el
 
 apps:
@@ -95,7 +94,7 @@ parts:
       - libfreetype6
       - libopenal1
       - libluajit-5.1-2
-      - libleveldb1v5
+      - libleveldb1d
       - libjpeg-turbo8
       - libxxf86vm1
       - libxfixes3
